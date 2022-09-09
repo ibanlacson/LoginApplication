@@ -56,7 +56,14 @@ class RegisterForm : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
             return
         }
 
-        val intent = Intent(this,)
+        val intent = Intent(this,ConfirmForm::class.java)
+        intent.putExtra("username",binding.txtUsername.text.toString())
+        intent.putExtra("password",binding.txtPassword.text.toString())
+        intent.putExtra("firstname",binding.txtFirst.text.toString())
+        intent.putExtra("lastname",binding.txtLast.text.toString())
+        intent.putExtra("age",binding.txtAge.text.toString())
+        intent.putExtra("genderIndex",genderIndex)
+        startActivity(intent)
     }
 
     override fun onCheckedChanged(p0: RadioGroup?, p1: Int) {
