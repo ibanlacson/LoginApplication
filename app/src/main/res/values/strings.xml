@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">LoginApplication</string>
+    <string name="register_user">Register User</string>
+    <string name="username">Username</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="prefer_not_to_say">Prefer not to say</string>
+    <string name="register">Register</string>
+    <string name="sex">Sex</string>
+    <string name="age">Age</string>
 </resources>
