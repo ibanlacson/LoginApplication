@@ -14,14 +14,11 @@ class SplashScreen : AppCompatActivity() {
         supportActionBar?.hide()
 
         val sharedPreferences = getSharedPreferences("MY_PREFERENCES", Context.MODE_PRIVATE)
-
         keepLogin = sharedPreferences.getBoolean(KEEP_ME_LOGIN,false)
 
         object : CountDownTimer(5000,1000){
             override fun onTick(p0: Long) {
-
             }
-
             override fun onFinish() {
                 if (!keepLogin){
                     val intent = Intent(this@SplashScreen,MainActivity::class.java)
@@ -33,6 +30,6 @@ class SplashScreen : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
-        }
+        }.start()
     }
 }
