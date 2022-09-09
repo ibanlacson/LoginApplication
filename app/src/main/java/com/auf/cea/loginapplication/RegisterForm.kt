@@ -1,5 +1,6 @@
 package com.auf.cea.loginapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -33,6 +34,11 @@ class RegisterForm : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
             binding.txtConfirm.error = "Required"
             return
         }
+        if (binding.txtPassword.text.toString() != binding.txtConfirm.text.toString()){
+            binding.txtConfirm.error = "Password are not the same"
+            binding.txtPassword.error = "Password are not the same"
+            return
+        }
         if (binding.txtFirst.text.isEmpty()){
             binding.txtFirst.error = "Required"
             return
@@ -49,6 +55,8 @@ class RegisterForm : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
             Toast.makeText(this,"Please specify your sex",Toast.LENGTH_SHORT).show()
             return
         }
+
+        val intent = Intent(this,)
     }
 
     override fun onCheckedChanged(p0: RadioGroup?, p1: Int) {
